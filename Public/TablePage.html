@@ -45,6 +45,17 @@
     background-color: #4CAF50;
     color: white;
 }
+/*button styling*/
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
     </style>
 
 
@@ -59,38 +70,65 @@
 
   <div class="container-fluid">
     <h1>Rebecca's Website</h1>
-      <h2>Table Page</h2>
-    Welcome to my website.
+      <h2>List of teammates for the Core</h2>
     <table style="width:100%">
     <tr>
-      <th>Firstname</th>
-      <th>Lastname</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Date of Birth</th>
       <th>Age</th>
-      <th>Age</th>
-      <th>Age</th>
+      <th>Major</th>
     </tr>
     <tr>
       <td>Jill</td>
       <td>Smith</td>
-      <td>50</td>
-      <td>94</td>
-      <td>94</td>
+      <td>01/03/1996</td>
+      <td>22</td>
+      <td>Informatics</td>
     </tr>
     <tr>
       <td>Eve</td>
       <td>Jackson</td>
-      <td>94</td>
-      <td>94</td>
-      <td>94</td>
+      <td>05/11/1996</td>
+      <td>22</td>
+      <td>Psychology</td>
     </tr>
     <tr>
-      <td>Eve</td>
-      <td>Jackson</td>
-      <td>94</td>
-      <td>94</td>
-      <td>94</td>
+      <td>Abe</td>
+      <td>Johnson</td>
+      <td>11/22/1995</td>
+      <td>22</td>
+      <td>Finance</td>
+    </tr>
+    <tr>
+      <td>Lou</td>
+      <td>Shea</td>
+      <td>08/03/1995</td>
+      <td>23</td>
+      <td>Engineering</td>
+    </tr>
+    <tr>
+      <td>Samantha</td>
+      <td>King</td>
+      <td>12/03/1995</td>
+      <td>22</td>
+      <td>Supply Chain Management</td>
     </tr>
   </table>
+  Enter new teammate:
+  <form>
+  First name:<br>
+  <input type="text" name="firstname"><br>
+  Last name:<br>
+  <input type="text" name="lastname"><br>
+  Date of Birth:<br>
+  <input type="text" name="Date of Birth"><br>
+  Age:<br>
+  <input type="text" name="Age"><br>
+  Major:<br>
+  <input type="text" name="Major"><br>
+  <button type="submit" name="Submit"></button>
+</form>
 
       </div>
     </div>
