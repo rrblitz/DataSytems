@@ -7,36 +7,96 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    </head>
+    <link rel="stylesheet" href="css/dashboard.css">
 
-
-<title>Project Dashboard</title>
-  <div class="topnav">
-    <a class="active" href="index.html">Home</a>
-    <a href="UserInfo.html">About Me</a>
-    <a href="#TablePage.html">Table</a>
-  </div>
+    <title>Project Dashboard</title>
   </head>
   <body>
-  <div class="container-fluid">
-    <h1>All about me, Jill!</h1>
-  <div class="container">
-      <img src="css/FoodPic.PNG" alt="FoodPic" style="width:100%;">
-      <div class="text-box">
-        <p> My name is Jill and my passion is food! In my free time I enjoy going to local restaraunts and trying new foods.
-      My food Instagram <a href="https://www.instagram.com/eatup.buttercup/">@Eatup.Buttercup</a> is where I post my food content in
-      attempt to promote local restaraunts. I love traveling to new cities
-      and having the opportunity to explore their local gems! My travels have included
-      Israel, Denver, Chicago, and New York City just to name a few. </p> </div>
-  </div>
-</div>
-</div>
-      </div>
+
+    <div class="container-fluid">
+      <h1>Project Name</h1>
+      <div class="row">
+        <div class="col placeholder">
+          Completion %
+        </div>
+
+        <section class="col">
+          <div class="row">
+            <div class="col">
+              <h2>Due date</h2>
+              <div class="ban">3 Nov 2018</div>
+            </div>
+            <div class="col">
+              <h2>Days Remaining</h2>
+              <div class="ban">27</div>
+            </div>
+          </div>
+        </section>
+
+        <div class="col placeholder">
+          Status
+        </div>
+      </div> <!-- end row 1, high-level summary information -->
+
+      <div class="row">
+        <div class="col placeholder" style="height:200px">
+          Budget chart goes here.
+        </div>
+        <div class="col placeholder">
+          Burndown chart goes here.
+        </div>
+        <div class="col placeholder">
+          Effort chart goes here.
+        </div>
+      </div> <!-- end row 2, charts -->
+
+      <div class="row">
+        <table id="taskTable"class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>
+                Task
+              </th>
+              <th>
+                Size
+              </th>
+              <th>
+                Team Name
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Create a dashboard
+              </td>
+              <td>
+                L
+              </td>
+              <td>
+                Dancing Foxes
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Build charts
+              </td>
+              <td>
+                M
+              </td>
+              <td>
+                Walled Terrapins
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div> <!-- end row 3, tabular data -->
     </div>
-  </div>
-
-
-</body>
+    <script src="js/tablesort.min.js"></script>
+    <script>
+      new Tablesort(document.getElementById('taskTable'));
+    </script>
+    </script>
+  </body>
 </html>
