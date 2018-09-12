@@ -75,9 +75,13 @@ var dashboardApp = new Vue({
        console.log('PROJECT FETCH ERROR:');
        console.log(err);
      })
+   },
+   gotoTask(tid) {
+    window.location='task.html?taskID' + tid;
    }
  },
-  created: function() {
-    this.fetchTasks()
-  }
+ created () {
+   this.fetchProject();
+   this.fetchTasks();
+ }
 })
