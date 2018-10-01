@@ -1,14 +1,8 @@
 <?php
-$foo = "bar\n";
-$foo = 'bit\n';
-
-echo $foo;
-echo $bar;
-
-Class Animal
-{
-  $name = 'pig';
-}
-
-$wilber = new Animal();
-echo $wilber ->name;
+require '../../app/common.php';
+// Get the taskId
+$taskId = $_GET['taskId'] ?? 0;
+// Fetch Work from database
+$work = Work::findByTaskId($taskId);
+// convert to JSON and print
+echo json_encode($work);
