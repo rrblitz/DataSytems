@@ -27,6 +27,11 @@ section .ban {
   border-left: 12px solid #eee;
   cursor: pointer;
 }
+
+#taskTable.table-hover> tbody > tr:hover  {
+  /* background-color: rgb(35, 95, 163); */
+}
+
 #taskTable > tbody > tr.current-sprint {
   border-left: 12px solid rgb(35, 95, 163);
 }
