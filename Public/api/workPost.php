@@ -1,7 +1,4 @@
 <?php
-
 $work = new Work($_POST);
-
-$work ->create();
-
-echo json_dencode($work);
+$work->create();
+echo json_encode($work);
