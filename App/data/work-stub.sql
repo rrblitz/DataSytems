@@ -1,3 +1,4 @@
+
 DROP TABLE IF EXISTS Work;
 
 CREATE TABLE Work (
@@ -9,6 +10,26 @@ CREATE TABLE Work (
   -- tz VARCHAR(10), --TODO? Too messy to deal with time zones?
   completion_estimate int NOT NULL CHECK(0 <= completion_estimate <= 100)
 );
+
+-- TRIGGERS
+CREATE TRIGGER sumWorkToTask
+AFTER INSERT ON Work
+FOR EACH ROW
+  UPDATE Tasks
+  SET
+    hours_worked = hours_worked + NEW.hours,
+    perc_complete = IF(
+      NEW.start_date = (
+        SELECT MAX(start_date)
+        FROM Work
+        WHERE task_id = NEW.task_id
+      ),
+      NEW.completion_estimate,
+      perc_complete
+    )
+  WHERE id = NEW.task_id
+;
+
 
 DROP TABLE IF EXISTS Teams;
 CREATE TABLE Teams (
