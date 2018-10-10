@@ -1,5 +1,5 @@
 <?php
-require '../../app/common.php';
+require '../../App/common.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   require 'workPost.php';
   exit;
