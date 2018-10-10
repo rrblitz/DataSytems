@@ -8,6 +8,7 @@ class Work
   public $stop;   //'YYYY-MM-DD', needs to be calculated
   public $hours;
   public $completion_estimate;
+  
   public function __construct($row) {
     $this->id = isset($row['id']) ? intval($row['id']) : null;
     $this->task_id = intval($row['task_id']);
