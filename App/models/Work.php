@@ -33,11 +33,11 @@ class Work
 
   public function create() {
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-
-    $sql = 'INSERT Work (task_id, team_id, start_date, hours, completion_estimate)
+    $sql = 'INSERT INTO Work (task_id, team_id, start_date, hours, completion_estimate)
             VALUES (?, ?, ?, ?, ?)';
 
     $statement = $db->prepare($sql);
+
     $success = $statement->execute([
       $this->task_id,
       $this->team_id,
@@ -46,6 +46,10 @@ class Work
       $this->completion_estimate
     ]);
 
+    if (!$success) {
+      // TODO: Better error handling
+      die('SQL error');
+    }
     $this->id = $db->lastInsertId();
   }
 
@@ -71,9 +75,7 @@ class Work
 
       array_push($arr, $workItem);
     }
-
-    // 4.b. return the array of work objects
-
     return $arr;
   }
+
 }
