@@ -1,5 +1,5 @@
 <?php
-require '../../app/common.php';
+require '../../App/common.php';
 // 1. Go to the database and get all teams
 $teams = Team::fetchAll();
 // 2. Convert to JSON

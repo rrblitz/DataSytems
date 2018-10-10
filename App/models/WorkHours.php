@@ -1,6 +1,6 @@
 <?php
 
-require '../../app/common.php';
+require '../../App/common.php';
 
 $projectId = iintval($_GET['projectId'] ?? 0);
 
